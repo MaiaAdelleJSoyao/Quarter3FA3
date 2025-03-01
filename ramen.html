@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ramen Randomizer</title>
+    <link rel="stylesheet" href="ramen.css">
+</head>
+<body>
+    <h1>Ramen Randomizer</h1>
+    <button onclick="generateOrder()">Generate New Order</button><br><br>
+
+    <div class="container">
+        <div class="grid">
+            <div class="box" id="beef-box">
+                <b>Beef Ramen</b>
+                <hr>
+                <p id="beef">-</p>
+            </div>
+            <div class="box" id="chicken-box">
+                <b>Chicken Ramen</b>
+                <hr>
+                <p id="chicken">-</p>
+            </div>
+            <div class="box" id="pork-box">
+                <b>Pork Ramen</b>
+                <hr>
+                <p id="pork">-</p>
+            </div>
+        </div>
+
+        <p><b class="highlight">The most ordered today is:</b> <span id="most">-</span></p>
+        <p><b class="highlight">The secret ingredient starts with the letter:</b> <span id="letter">-</span></p>
+        <p><b class="highlight">Total preparation time:</b> <span id="time">-</span></p>
+    </div>
+
+    <script>
+        function generateOrder() {
+            let beef = Math.ceil(Math.random() * 20);
+            let chicken = Math.ceil(Math.random() * 20);
+            let pork = Math.ceil(Math.random() * 20);
+
+            let ramen = { "Beef Ramen": beef, "Chicken Ramen": chicken, "Pork Ramen": pork };
+            let most = Object.keys(ramen).reduce((a, b) => ramen[a] > ramen[b] ? a : b);
+
+            const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            let letter = alphabet[beef - 1] || "?";
+
+            let totalMins = chicken * pork;
+            let hours = Math.floor(totalMins / 60);
+            let mins = totalMins % 60;
+
+            document.getElementById("beef").innerText = beef;
+            document.getElementById("chicken").innerText = chicken;
+            document.getElementById("pork").innerText = pork;
+            document.getElementById("most").innerText = most;
+            document.getElementById("letter").innerText = letter;
+            document.getElementById("time").innerText = `${totalMins} minutes (${hours} hours and ${mins} minutes)`;
+        }
+
+        generateOrder();
+    </script>
+</body>
+</html>

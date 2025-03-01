@@ -1,0 +1,93 @@
+
+
+body { 
+    font-family: 'Sawarabi Mincho', serif;
+    text-align: center; 
+    background-image: url('https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcGYtczEyNS1ha2U3MDExLmpwZw.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 20px; 
+    color: white;
+}
+
+.container { 
+    background: black; 
+    padding: 20px; 
+    border-radius: 0px; 
+    display: inline-block; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    border: 5px solid #8B0000;
+    color: white;
+}
+
+h1 { 
+    font-family: 'Sawarabi Mincho', serif;
+    color: #840000;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px #8B0000;
+}
+
+.grid { 
+    display: flex; 
+    justify-content: center; 
+    gap: 20px; 
+    margin-top: 10px; 
+}
+
+.box { 
+    background-size: cover; 
+    padding: 5px; 
+    border-radius: 4px; 
+    text-align: center; 
+    width: 160px; 
+    height: 190px; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    color: white; 
+    position: relative; 
+    font-family: Sans-Serif;
+}
+
+#beef-box { 
+    background-color: #A52A2A; 
+    background-image: url('https://boroughbroth.co.uk/cdn/shop/files/Beef_Ramen.jpg?v=1727800907'); 
+}
+
+#chicken-box { 
+    background-color: #D2691E; 
+    background-image: url('https://www.forkknifeswoon.com/wp-content/uploads/2014/10/simple-homemade-chicken-ramen-fork-knife-swoon-01.jpg'); 
+}
+
+#pork-box { 
+    background-color: #8B4513; 
+    background-image: url('https://thecommunalfeast.com/wp-content/uploads/2021/03/IMG_7784-scaled.jpg'); 
+}
+
+button { 
+    margin-top: 15px; 
+    padding: 14px 24px; 
+    font-size: 20px; 
+    font-weight: bold;
+    background: #8B0000; 
+    color: white; 
+    border: none; 
+    border-radius: 0px; 
+    cursor: pointer; 
+    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+    transition: 0.3s;
+}
+
+button:hover { 
+    background: #ffcc00;
+    color: #8B0000;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.6);
+}
+
+.highlight {
+    color: #ffcc00;
+    font-weight: bold;
+}
